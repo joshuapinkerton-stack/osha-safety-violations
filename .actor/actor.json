@@ -1,0 +1,18 @@
+{
+  "name": "osha-safety-violations",
+  "title": "OSHA Safety Violations Scraper",
+  "description": "Scrapes OSHA enforcement inspection data and emits structured contact + penalty records.",
+  "version": "0.1",
+  "meta": {"templateId": "python-cheerio"},
+  "input": "INPUT_SCHEMA.json",
+  "output": "OUTPUT_SCHEMA.json",
+  "pricing": {
+    "payPerEvent": {
+      "events": [
+        {"name": "violation_record", "pricePerUnit": 5},
+        {"name": "safety_snapshot", "pricePerUnit": 10}
+      ],
+      "pricingInfo": "$0.05 per violation record, $0.10 per inspection snapshot."
+    }
+  }
+}

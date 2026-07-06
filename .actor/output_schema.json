@@ -1,0 +1,26 @@
+{
+  "type": "object",
+  "properties": {
+    "results": {
+      "title": "Results",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ein": {"title": "EIN", "type": "string"},
+          "companyName": {"title": "Company name", "type": "string"},
+          "siteAddress": {"title": "Site address", "type": "string"},
+          "city": {"title": "City", "type": "string"},
+          "state": {"title": "State", "type": "string"},
+          "zip": {"title": "Zip", "type": "string"},
+          "inspectionId": {"title": "Inspection ID", "type": "string"},
+          "date": {"title": "Date", "type": "string"},
+          "inspectionType": {"title": "Inspection type", "type": "string"},
+          "severity": {"title": "Severity", "type": "string"},
+          "violationsFound": {"title": "Violations found", "type": "integer"},
+          "totalPenalties": {"title": "Total penalties", "type": "number"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "OSHA Safety Violations Input",
+  "type": "object",
+  "properties": {
+    "startUrls": {
+      "title": "Start URLs",
+      "type": "array",
+      "editor": "requestListSources",
+      "default": [{"url": "https://www.osha.gov/enforcement/establishment-search-results?state=TX"}],
+      "prefill": [{"url": "https://www.osha.gov/enforcement/establishment-search-results?state=TX"}],
+      "description": "OSHA establishment search result pages to crawl."
+    },
+    "maxRequestsPerCrawl": {
+      "title": "Max requests per crawl",
+      "type": "integer",
+      "editor": "number",
+      "default": 200,
+      "description": "Optional cap on total HTTP requests for the run."
+    },
+    "establishmentLinkSelector": {
+      "title": "Establishment link CSS selector",
+      "type": "string",
+      "editor": "textfield",
+      "default": "a[href*='/establishment/']",
+      "description": "CSS selector to extract establishment detail links from listing pages."
+    },
+    "inspectionLinkSelector": {
+      "title": "Inspection link CSS selector",
+      "type": "string",
+      "editor": "textfield",
+      "default": "a[href*='/inspection/']",
+      "description": "CSS selector to extract inspection detail links from establishment pages."
+    },
+    "userAgent": {
+      "title": "User agent",
+      "type": "string",
+      "editor": "textfield",
+      "default": "Apify-osha-safety-violations/1.0 (+https://github.com/joshuapinkerton-stack/osha-safety-violations)",
+      "description": "User-Agent sent with each request."
+    }
+  }
+}
