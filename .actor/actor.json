@@ -6,23 +6,25 @@
   "description": "Scrape OSHA enforcement data and emit structured inspection/penalty records for EHS teams, compliance analysts, and workplace safety consultants.",
   "version": "1.0",
   "meta": {
-    "templateId": "python-crawlee-cheerio",
-    "generatedBy": "Dandy/Hermes Agent",
-    "category": "compliance"
+    "image": "",
+    "category": "general",
+    "actorUrl": "https://github.com/joshuapinkerton-stack/osha-safety-violations"
   },
   "input": "./input_schema.json",
   "output": "./output_schema.json",
   "pricing": {
-    "pricePerEvent": [
-      {
-        "eventType": "violation_record",
-        "price": 5
-      },
-      {
-        "eventType": "safety_snapshot",
-        "price": 10
-      }
-    ],
+    "payPerEvent": {
+      "events": [
+        {
+          "name": "violation_record",
+          "pricePerUnit": 5
+        },
+        {
+          "name": "safety_snapshot",
+          "pricePerUnit": 10
+        }
+      ]
+    },
     "pricingInfo": "Pay-per-Event: $0.05 per violation record, $0.10 per inspection snapshot."
   }
 }
