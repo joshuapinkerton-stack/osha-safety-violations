@@ -1,18 +1,28 @@
 {
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
   "name": "osha-safety-violations",
   "title": "OSHA Safety Violations Scraper",
-  "description": "Scrapes OSHA enforcement inspection data and emits structured contact + penalty records.",
-  "version": "0.1",
-  "meta": {"templateId": "python-cheerio"},
-  "input": "INPUT_SCHEMA.json",
-  "output": "OUTPUT_SCHEMA.json",
+  "description": "Scrape OSHA enforcement data and emit structured inspection/penalty records for EHS teams, compliance analysts, and workplace safety consultants.",
+  "version": "1.0",
+  "meta": {
+    "templateId": "python-crawlee-cheerio",
+    "generatedBy": "Dandy/Hermes Agent",
+    "category": "compliance"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
   "pricing": {
-    "payPerEvent": {
-      "events": [
-        {"name": "violation_record", "pricePerUnit": 5},
-        {"name": "safety_snapshot", "pricePerUnit": 10}
-      ],
-      "pricingInfo": "$0.05 per violation record, $0.10 per inspection snapshot."
-    }
+    "pricePerEvent": [
+      {
+        "eventType": "violation_record",
+        "price": 5
+      },
+      {
+        "eventType": "safety_snapshot",
+        "price": 10
+      }
+    ],
+    "pricingInfo": "Pay-per-Event: $0.05 per violation record, $0.10 per inspection snapshot."
   }
 }
